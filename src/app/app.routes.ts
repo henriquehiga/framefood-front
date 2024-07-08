@@ -8,7 +8,7 @@ import { MeusEstabelecimentosComponent } from './pages/dashboard/meus-estabeleci
 export const routes: Routes = [
     {
         component: AutenticacaoComponent,
-        path: '',
+        path: 'auth',
         children: [
             {
                 component: LoginComponent,
@@ -24,12 +24,17 @@ export const routes: Routes = [
                 component: MeusEstabelecimentosComponent,
                 path: 'meus-estabelecimentos'
             }
-        ]
+        ],
     },
     {
-        redirectTo: "login",
+        path: 'dashboard',
+        redirectTo: "dashboard/meus-estabelecimentos",
+        pathMatch: 'full'
+    },
+    {
         path: '',
-        pathMatch: 'full',
+        redirectTo: "auth/login",
+        pathMatch: 'full'
     },
     {
         component: PaginaNaoEncontradaComponent,
