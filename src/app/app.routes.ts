@@ -4,6 +4,7 @@ import { DashboardComponent } from './layout/dashboard/dashboard.component';
 import { LoginComponent } from './pages/autenticacao/login/login.component';
 import { PaginaNaoEncontradaComponent } from './pages/pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { MeusEstabelecimentosComponent } from './pages/dashboard/meus-estabelecimentos/meus-estabelecimentos.component';
+import { EstabelecimentoComponent } from './pages/dashboard/estabelecimento/estabelecimento.component';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,11 @@ export const routes: Routes = [
             {
                 component: LoginComponent,
                 path: 'login'
+            },
+            {
+                path: '',
+                redirectTo: 'auth',
+                pathMatch: 'full'
             }
         ]
     },
@@ -23,6 +29,15 @@ export const routes: Routes = [
             {
                 component: MeusEstabelecimentosComponent,
                 path: 'meus-estabelecimentos'
+            },
+            {
+                component: EstabelecimentoComponent,
+                path: 'estabelecimento'
+            },
+            {
+                path: '',
+                redirectTo: 'meus-estabelecimentos',
+                pathMatch: 'full'
             }
         ],
     },

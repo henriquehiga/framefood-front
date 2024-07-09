@@ -1,1 +1,12 @@
-<p>meus-estabelecimentos works!</p>
+<p>Bem vindo novamente, {{usuario?.nome}}</p>
+<div class="my-4">
+    <p>Seus estabelecimentos:</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 my-2 gap-4">
+        <a class="border rounded-md p-4 cursor-pointer hover:bg-slate-200"
+            *ngFor="let estabelecimentoUsuario of estabelecimentosUsuario"
+            [routerLink]="['/dashboard/estabelecimento']"
+            [queryParams]="{'id-estabelecimento': estabelecimentoUsuario._id}">
+            {{estabelecimentoUsuario?._nome}}
+        </a>
+    </div>
+</div>
