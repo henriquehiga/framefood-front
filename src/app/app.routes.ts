@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/autenticacao/login/login.component';
 import { PaginaNaoEncontradaComponent } from './pages/pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { MeusEstabelecimentosComponent } from './pages/dashboard/meus-estabelecimentos/meus-estabelecimentos.component';
 import { EstabelecimentoComponent } from './pages/dashboard/estabelecimento/estabelecimento.component';
+import { MenuComponent } from './pages/dashboard/estabelecimento/menu/menu.component';
 
 export const routes: Routes = [
     {
@@ -32,7 +33,11 @@ export const routes: Routes = [
             },
             {
                 component: EstabelecimentoComponent,
-                path: 'estabelecimento'
+                path: 'estabelecimento/:idEstabelecimento',
+            },
+            {
+                component: MenuComponent,
+                path: 'estabelecimento/:idEstabelecimento/menu/:idMenu',
             },
             {
                 path: '',

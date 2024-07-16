@@ -4,8 +4,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 my-2 gap-4">
         <a class="border rounded-md p-4 cursor-pointer hover:bg-slate-200"
             *ngFor="let estabelecimentoUsuario of estabelecimentosUsuario"
-            [routerLink]="['/dashboard/estabelecimento']"
-            [queryParams]="{'id-estabelecimento': estabelecimentoUsuario._id}">
+            [routerLink]="['/dashboard', 'estabelecimento', estabelecimentoUsuario._id]">
             {{estabelecimentoUsuario?._nome}}
         </a>
     </div>

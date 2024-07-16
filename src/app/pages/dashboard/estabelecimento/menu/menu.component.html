@@ -1,0 +1,10 @@
+<p>{{idMenu}}</p>
+<p>{{idEstabelecimento}}</p>
+
+<form>
+    <input type="text" placeholder="Nome categoria">
+</form>
+
+<div *ngFor="let categoria of categorias">
+    {{categoria._nome}}
+</div>

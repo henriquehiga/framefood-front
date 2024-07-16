@@ -11,7 +11,7 @@ export class UsuarioService {
   ) { }
 
   async obtemInformacoesUsuario() {
-    const resposta = await this.httpClient.get('http://localhost:3000/usuario?email=Arvilla.Bruen12@hotmail.com').toPromise() as any;
+    const resposta = await this.httpClient.get('http://localhost:3000/usuario?email=Loraine.Moore@gmail.com').toPromise() as any;
 
     return {
       id: resposta._id,

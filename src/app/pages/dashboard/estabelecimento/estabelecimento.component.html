@@ -1,5 +1,14 @@
 <div>
-    <p>{{dadosEstabelecimento._nome}}</p>
-    <p>{{dadosEstabelecimento._endereco}}</p>
-    <p>{{dadosEstabelecimento._telefone}}</p>
+    <p>{{dadosEstabelecimento?._nome}}</p>
+    <p>{{dadosEstabelecimento?._endereco}}</p>
+    <p>{{dadosEstabelecimento?._telefone}}</p>
+</div>
+
+<div class="grid grid-cols-3 gap-4">
+    <a class="border p-4 bg-red-500" 
+        *ngFor="let menu of menusEstabelecimento"
+        [routerLink]="['menu', menu._id]" 
+    >
+        {{menu._nome}}
+    </a>
 </div>
