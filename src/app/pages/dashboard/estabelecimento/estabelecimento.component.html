@@ -1,14 +1,14 @@
-<div>
-    <p>{{dadosEstabelecimento?._nome}}</p>
-    <p>{{dadosEstabelecimento?._endereco}}</p>
-    <p>{{dadosEstabelecimento?._telefone}}</p>
-</div>
+<div class="flex flex-col gap-4">
+    <div class="w-full bg-white rounded-md p-4">
+        <p>{{dadosEstabelecimento?._nome}}</p>
+        <p>{{dadosEstabelecimento?._endereco}}</p>
+        <p>{{dadosEstabelecimento?._telefone}}</p>
+    </div>
 
-<div class="grid grid-cols-3 gap-4">
-    <a class="border p-4 bg-red-500" 
-        *ngFor="let menu of menusEstabelecimento"
-        [routerLink]="['menu', menu._id]" 
-    >
-        {{menu._nome}}
-    </a>
+    <div class="grid grid-cols-3 gap-4">
+        <a class="border p-4 bg-red-500 rounded-md" *ngFor="let menu of menusEstabelecimento"
+            [routerLink]="['menu', menu._id]">
+            {{menu._nome}}
+        </a>
+    </div>
 </div>
