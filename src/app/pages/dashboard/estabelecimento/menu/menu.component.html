@@ -1,10 +1,14 @@
 <p>{{idMenu}}</p>
 <p>{{idEstabelecimento}}</p>
 
-<form>
-    <input type="text" placeholder="Nome categoria">
-</form>
+<div class="flex flex-col gap-2">
+    <input id="nomeCategoriaProduto" [(ngModel)]="nomeCategoriaProduto" type="text" placeholder="Nome categoria">
+    <button (click)="criarCategoriaProduto()">Criar</button>
+</div>
 
-<div *ngFor="let categoria of categorias">
-    {{categoria._nome}}
+<div class="grid grid-cols-3 gap-4">
+    <div class="bg-red-500 p-4 rounded-md" *ngFor="let categoria of categorias">
+        <p>{{categoria._nome}}</p>
+        <button class="cursor-pointer" (click)="deletarCategoriaProduto(categoria._id)">Excluir</button>
+    </div>
 </div>
