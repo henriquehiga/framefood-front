@@ -6,7 +6,7 @@
     </div>
 
     <div class="grid grid-cols-3 gap-4">
-        <a class="border p-4 bg-red-500 rounded-md" *ngFor="let menu of menusEstabelecimento"
+        <a class="border p-4 bg-white rounded-md" *ngFor="let menu of menusEstabelecimento"
             [routerLink]="['menu', menu._id]">
             {{menu._nome}}
         </a>
